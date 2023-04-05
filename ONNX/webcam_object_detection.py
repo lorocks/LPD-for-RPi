@@ -13,7 +13,6 @@ freq = cv2.getTickFrequency()
 cv2.namedWindow("Detected Objects", cv2.WINDOW_NORMAL)
 while cap.isOpened():
     t1 = cv2.getTickCount()
-    ret, frame = cap.read()
 
     # Read frame from the video
     ret, frame = cap.read()

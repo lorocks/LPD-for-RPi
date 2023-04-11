@@ -2,6 +2,7 @@ import base64
 import cv2
 import serial
 import requests
+import time
 
 from yolov7 import YOLOv7
 
@@ -14,7 +15,7 @@ cap = cv2.VideoCapture(0)
 arduino = serial.Serial('/dev/ttyACM0', 115200, timeout=1)
 arduino.reset_input_buffer()
 num = '1'
-arduino.write(bytes(num, 'utf-8'))
+time.sleep(1)
 
 # Initialize YOLOv7 object detector
 model_path = "models/yolov7-tiny.onnx"
@@ -23,6 +24,8 @@ frame_rate_calc = 1
 freq = cv2.getTickFrequency()
 cv2.namedWindow("Detected Objects", cv2.WINDOW_NORMAL)
 scores = []
+arduino.write(bytes(num, 'utf-8'))
+
 while cap.isOpened():
     t1 = cv2.getTickCount()
 
@@ -58,7 +61,7 @@ while cap.isOpened():
 
     # Update object localizer
     boxes, scores, class_ids = yolov7_detector(frame)
-    print(boxes, scores, class_ids)
+    # print(boxes, scores, class_ids)
 
     combined_img = yolov7_detector.draw_detections(frame)
     cv2.putText(combined_img, 'FPS: {0:.2f}'.format(frame_rate_calc), (30, 50), cv2.FONT_HERSHEY_SIMPLEX,
@@ -72,3 +75,7 @@ while cap.isOpened():
     # Press key q to stop
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
+cap.release()
+cv2.destroyAllWindows()
+arduino.write(bytes('4', 'utf-8'))

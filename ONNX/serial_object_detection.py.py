@@ -46,8 +46,9 @@ while cap.isOpened():
             res = requests.post('https://ll753-flaskmlbackendlpr.hf.space/sendlicenseY', json=my_img)
             res.raise_for_status()
             print(res.content)
-            if 'ection' in res.content:
+            if not 'Image' in res.content:
                 arduino.write(bytes('3', 'utf-8'))
+                num = '1'
 
         elif num == '2' and len(scores) == 0:
             num = '1'

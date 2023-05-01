@@ -44,8 +44,8 @@ while cap.isOpened():
                 if not 'Image' in res.content:
                     num = '1'
 
-            elif num == '3' and len(scores) == 0:
-                num = '1'
+        elif num == '3' and len(scores) == 0:
+            num = '1'
 
         # Read frame from video
         ret, frame = cap.read()

@@ -1,4 +1,4 @@
-# LPD-for-RPi
+## LPD-for-RPi
 
 This is a Project to perform License Plate Detection with inference being performed on a Raspberry Pi 3B.
 The RPi detects License Plates using ML and sends inferred frames to a backend server for analysis.
@@ -11,19 +11,19 @@ All three folders contain the testing code for each specific model
 The final chosen inference method is ONNX
 The script is located in the ONNX folder
 
-# To use Inference in RPi, ML Activation
-<u>Inference with Arduino</u>
+## To use Inference in RPi, ML Activation
+#Inference with Arduino
 The 'serial_object_detection.py' script is to be used with an Arduino connected to the RPi
 
-<u>Inference without Arduino</u>
+#Inference without Arduino
 The 'final_object_detection.py' script is the ML Activation method to be used without the Arduino
 
 
 
-# Drive link for ONNX 
+## Drive link for ONNX 
 https://drive.google.com/file/d/1BWH24eYsWIBKp-Q47n6olxqjvERsa8CF/view?usp=sharing
 
-# For Motor Working
+## For Motor Working
 Install PySerial
 ````
 pip3 install pyserial

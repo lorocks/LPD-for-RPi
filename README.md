@@ -12,7 +12,7 @@ The final chosen inference method is ONNX
 The script is located in the ONNX folder
 
 ## To use Inference in RPi, ML Activation
-#Inference with Arduino
+#<ins>Inference with Arduino</ins>
 The 'serial_object_detection.py' script is to be used with an Arduino connected to the RPi
 
 #Inference without Arduino

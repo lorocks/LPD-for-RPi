@@ -18,6 +18,7 @@ https://huggingface.co/spaces/ll753/FlaskMLBackendLPR
 # View Captured Information
 Captured frame can be viewed on a hosted website
 https://nextjs-lpr.vercel.app/
+<br>
 Code for Website:
 https://github.com/lorocks/NextJS-LPR
 

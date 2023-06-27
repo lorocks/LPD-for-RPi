@@ -33,6 +33,10 @@ The 'serial_object_detection.py' script is to be used with an Arduino connected 
 ## Inference without Arduino
 The 'final_object_detection.py' script is the ML Activation method to be used without the Arduino
 
+## Installing RPi Dependencies
+To install dependencies on the RPi use
+<br>
+https://github.com/lorocks/ML-Installation-for-RPi-64bit-3.9-Python
 
 
 # Drive link for ONNX 

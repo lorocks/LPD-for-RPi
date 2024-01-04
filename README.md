@@ -11,6 +11,8 @@ All three folders contain the testing code for each specific model
 The final chosen inference method is ONNX
 The script is located in the ONNX folder
 
+The final report submission has also been provided.
+
 # Inference Backend
 Backend ML Server hosted in HuggingFace Spaces
 <br>
